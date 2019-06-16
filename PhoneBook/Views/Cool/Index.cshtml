@@ -1,0 +1,14 @@
+﻿@model PhoneBook.Models.ListOfContacts;
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<ol>
+@foreach (var contact in Model.MyContacts)
+{
+        <li>@contact</li>   
+}
+</ol>

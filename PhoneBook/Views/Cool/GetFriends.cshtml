@@ -1,0 +1,17 @@
+﻿@model PhoneBook.Models.ListOfContacts
+@{
+    ViewData["Title"] = "GetFriends";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetFriends</h2>
+
+@{
+    var friends = Model.MyContacts.Where(x => x.IsCloseFriend == true).ToList();
+    foreach (var contact in friends)
+    {
+        <li>
+            @contact.FirstName, @contact.LastName Number: @contact.PhoneNumber
+        </li>
+    }
+}

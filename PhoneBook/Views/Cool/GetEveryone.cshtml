@@ -1,0 +1,20 @@
+﻿@model PhoneBook.Models.ListOfContacts
+@{
+    ViewData["Title"] = "GetEveryone";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetEveryone</h2>
+
+<ul>
+    @{
+        foreach (var contact in Model.MyContacts)
+        {
+
+            <li>
+                @contact.FirstName, @contact.LastName Number: @contact.PhoneNumber
+            </li>
+        }
+     }
+
+</ul>
